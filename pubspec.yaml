@@ -1,0 +1,122 @@
+name: game_adaptation_flutter
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  flutter_localizations:
+    sdk: flutter
+
+  # Navigator 2.0
+  auto_route: ^7.9.2
+
+  # dio - отвечает за работу с get, post,delete и тд запросами
+  dio: ^5.3.3
+
+  # flutter_svg - отображение векторной графики(.svg файлы)
+  flutter_svg: ^2.0.7
+
+  # Предоставляет подробную информацию о устройстве/эмуляторе
+  device_info: ^2.0.3
+
+  # package_info - получение информации о приложении: версия,имя и тд
+  package_info: ^2.0.2
+
+  # bloc
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+
+  # Иньекция Singleton зависимостей
+  get_it: ^7.6.4
+
+  # shared_preferences - сохранение небольших данных в локальную память устройства
+  shared_preferences: ^2.2.2
+
+  # dartz - используется для работы с состояниями: если приходит ошибка, кладем ее в left(error),инача right(responseModel)
+  dartz: ^0.10.1
+
+  # freezed пакет для генерации и следит за мутирвонием данных:
+  freezed: ^2.4.5
+  freezed_annotation: ^2.4.1
+
+  # для генерации .g файлов, чтобы использовать fromJson и toJson генерацию
+  json_serializable: ^6.7.1
+
+  # collection - для работы с коллекциями
+  collection: ^1.17.1
+
+  # Прозрачность сбора статистики и аналитики
+  app_tracking_transparency: ^2.0.4
+
+  # permission_handler - запрос и получение разрешения на работу с датчиками устройства
+  permission_handler: ^11.0.1
+
+  # оверрайдид "==" и "hashCode", чтобы можно было сравнивать классы
+  equatable: ^2.0.5
+
+  # используется для настройки локализации
+  intl_utils: ^2.8.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Navigator 2.0
+  auto_route_generator: ^7.3.2
+
+  # build_runner - генерация freezed файлов
+  build_runner: ^2.3.3
+
+  #  flutter_gen_runner - используется для генерации классов ассетов
+  flutter_gen_runner: ^5.3.0
+
+  # TODO стоит добавить эти метрики, чтобы убрать не используемые файлы и п
+  dart_code_metrics: ^5.7.2
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/fonts/
+
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Black-new.ttf
+          weight: 900
+        - asset: assets/fonts/Raleway-ExtraBold-new.ttf
+          weight: 800
+        - asset: assets/fonts/Raleway-Bold-new.ttf
+          weight: 700
+        - asset: assets/fonts/Raleway-SemiBold-new.ttf
+          weight: 600
+        - asset: assets/fonts/Raleway-Medium-new.ttf
+          weight: 500
+        - asset: assets/fonts/Raleway-Regular-new.ttf
+          weight: 400
+
+flutter_gen:
+  output: lib/core/common/
+  line_length: 120
+  integrations:
+    flutter_svg: true
+
+# настройка локализации
+flutter_intl:
+  enabled: true
+  main_locale: ru
+  arb_dir: lib/core/l10n/arb
+  output_dir: lib/core/l10n/generated
