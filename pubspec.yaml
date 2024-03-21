@@ -14,8 +14,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter  
 
-  # Удалить решётку в адресной страке
-  url_strategy: ^0.2.0
+  flutter_web_plugins:
+    sdk: flutter
 
   # Navigator 2.0
   auto_route: ^7.9.2

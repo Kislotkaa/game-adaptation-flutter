@@ -27,7 +27,6 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       // router.push(GameRoute(id: '1'));
                       sl<ThemeCubit>().switchTheme();
-                      sl<ThemeCubit>().rebuildAllChildren(context);
                     },
                     child: const Text('Game'),
                   ),
