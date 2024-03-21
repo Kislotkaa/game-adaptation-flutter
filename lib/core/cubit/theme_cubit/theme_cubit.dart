@@ -23,9 +23,8 @@ class ThemeCubit extends Cubit<ThemeState> {
     required ThemeRepository themeRepository,
   })  : _themeRepository = themeRepository,
         super(const ThemeState()) {
-    emit(state.copyWith(appTheme: getAppTheme()));
-
     _listenTheme();
+    emit(state.copyWith(appTheme: getAppTheme()));
   }
 
   @override
