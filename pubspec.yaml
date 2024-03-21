@@ -9,10 +9,13 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
+    sdk: flutter # Flutter 3.19.3
     
   flutter_localizations:
-    sdk: flutter
+    sdk: flutter  
+
+  # Удалить решётку в адресной страке
+  url_strategy: ^0.2.0
 
   # Navigator 2.0
   auto_route: ^7.9.2
@@ -51,12 +54,6 @@ dependencies:
 
   # collection - для работы с коллекциями
   collection: ^1.17.1
-
-  # Прозрачность сбора статистики и аналитики
-  app_tracking_transparency: ^2.0.4
-
-  # permission_handler - запрос и получение разрешения на работу с датчиками устройства
-  permission_handler: ^11.0.1
 
   # оверрайдид "==" и "hashCode", чтобы можно было сравнивать классы
   equatable: ^2.0.5

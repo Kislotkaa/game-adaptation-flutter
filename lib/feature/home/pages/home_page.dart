@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:game_adaptation_flutter/core/cubit/theme_cubit/theme_cubit.dart';
 import 'package:game_adaptation_flutter/core/router/app_router.dart';
+import 'package:game_adaptation_flutter/locator.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -10,6 +12,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appTheme.basicColor,
       body: Stack(
         children: [
           const Positioned.fill(child: AutoRouter()),
@@ -22,7 +25,9 @@ class HomePage extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      router.push(GameRoute(id: '1'));
+                      // router.push(GameRoute(id: '1'));
+                      sl<ThemeCubit>().switchTheme();
+                      sl<ThemeCubit>().rebuildAllChildren(context);
                     },
                     child: const Text('Game'),
                   ),

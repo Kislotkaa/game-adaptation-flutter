@@ -1,21 +1,13 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:game_adaptation_flutter/core/theme/colors/app_theme_colors.dart';
 
 class AppThemeData {
-  static final ThemeData dark = ThemeData.dark().copyWith(
-    appBarTheme: AppBarTheme(
+  static final ThemeData dark = ThemeData.light().copyWith(
+    appBarTheme: const AppBarTheme(
       elevation: 0,
       color: AppDarkColors.dark,
-      iconTheme: const IconThemeData(
+      iconTheme: IconThemeData(
         color: AppDarkColors.white,
-      ),
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.black,
-        statusBarIconBrightness: Platform.isIOS ? Brightness.dark : Brightness.light,
-        statusBarBrightness: Brightness.dark,
       ),
     ),
     dividerColor: Colors.transparent,
@@ -118,17 +110,12 @@ class AppThemeData {
   );
 
   static final ThemeData light = ThemeData.light().copyWith(
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       elevation: 0,
       color: AppLightColors.white,
-      iconTheme: const IconThemeData(
+      iconTheme: IconThemeData(
           // color: AppLightColors.lightText,
           ),
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.white,
-        statusBarIconBrightness: Platform.isIOS ? Brightness.light : Brightness.dark,
-        statusBarBrightness: Brightness.light,
-      ),
     ),
     brightness: Brightness.light,
     dividerColor: Colors.transparent,
